@@ -1,26 +1,26 @@
 <div class="container">
-    <h1 class="center">Burger!</h1>
+    <h1 class="center">Burgers of the Day!</h1>
     <div class="row">
         <div class="col s6">
-            <h3 class="center">Fresh out of the grill</h3>
-            <ul>
+            <h3 class="center">Uneaten Burgers!</h3>
+            <div>
                 {{#each burgers}} {{#unless devoured}}
-                <li>
+                <div>
                     {{burger_name}}
-                    <button class="eat btn right" data-id="{{id}}" data-devoured="{{devoured}}">Eat? </button>
-                </li>
+                    <button class="eat btn right" data-id="{{id}}" data-devoured="{{devoured}}">Devour </button>
+                </div>
                 {{/unless}} {{/each}}
-            </ul>
+            </div>
         </div>
         <div class="col s6">
             <h3 class="center">Devoured</h3>
-            <ul>
+            <div>
                 {{#each burgers}} {{#if devoured}}
-                <li>
+                <div>
                     {{burger_name}}
-                </li>
+                </div>
                 {{/if}} {{/each}}
-            </ul>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -28,7 +28,7 @@
             <h3 class="center">Order a burger</h3>
             <form class="create-form">
                 <div class="form-group">
-                    <label for="burgs">Burger Name:</label>
+                    <label for="burgs">Burger of Choice:</label>
                     <input type="text" id="burgs" burger_name="name">
                 </div>
                 <div class="center-align">
