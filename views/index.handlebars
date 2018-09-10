@@ -2,21 +2,27 @@
     <h1 class="center">Burgers of the Day!</h1>
     <div class="row">
         <div class="col s6">
+            <img class="burgerImg" src="https://truffle-assets.imgix.net/0d26ee59-813-lucyjuicycrunchburger-land1.jpg" alt="burger image">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="uneatenBox col s6">
             <h3 class="center">Uneaten Burgers!</h3>
             <div>
                 {{#each burgers}} {{#unless devoured}}
-                <div>
+                <div class="uneaten">
                     {{burger_name}}
-                    <button class="eat btn right" data-id="{{id}}" data-devoured="{{devoured}}">Devour </button>
+                    <button class="btn right" data-id="{{id}}" data-devoured="{{devoured}}">Devour </button>
                 </div>
                 {{/unless}} {{/each}}
             </div>
         </div>
-        <div class="col s6">
+        <div class="devouredBox col s6">
             <h3 class="center">Devoured</h3>
             <div>
                 {{#each burgers}} {{#if devoured}}
-                <div>
+                <div class="devoured">
                     {{burger_name}}
                 </div>
                 {{/if}} {{/each}}

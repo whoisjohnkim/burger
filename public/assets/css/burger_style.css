@@ -1,0 +1,22 @@
+body {
+    background-image: url('https://images.homedepot-static.com/productImages/ed1ee2e3-fdcc-4124-82b2-3bbc323230b7/svn/minuet-lg-hausys-viatera-countertop-samples-lg-m001-vt-64_1000.jpg');
+    font-family: 'Gamja Flower', cursive;
+}
+
+.uneaten {
+    color: black;
+    padding: 10px;
+}
+
+.burgerImg {
+    display: block;
+    margin-left: 50%;
+    width: 100%;
+}
+
+
+.devoured {
+    color: darkgrey;
+    padding: 10px;
+    text-decoration: line-through;
+}
