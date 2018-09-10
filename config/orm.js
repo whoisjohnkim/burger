@@ -3,7 +3,8 @@ var connection = require("../config/connection.js");
 
 var orm = {
     selectAll: function(tableName, cb){
-        var queryString = "SELECT * FROM ${tableName};";
+        var queryString = `SELECT * FROM ${tableName};`;
+        console.log(queryString)
         connection.query(queryString, function(err, result){
             if (err) throw err;
             cb(result);
@@ -11,8 +12,8 @@ var orm = {
     },
     //INSERT INTO burgers (burger_name) VALUES(burgername here)
     insertOne: function(tableName, col, val, cb){
-        var queryString = "INSERT INTO ${tableName} "
-        queryString += "(${col}) VALUES (?);"
+        var queryString = `INSERT INTO ${tableName} (${col}) VALUES (?);`
+        console.log(queryString)
         connection.query(queryString, val, function(err, result){
             if (err) throw err;
 
@@ -21,9 +22,8 @@ var orm = {
     },
     //UPDATE burgers SET (devoured = true) WHERE id = ?
     updateOne: function(tableName, condition, cb){
-        var queryString = "UPDATE ${tableName} "
-        queryString += "SET devoured=true "
-        queryString += "WHERE ${condition};"
+        var queryString = `UPDATE ${tableName} SET devoured=true WHERE ${condition}`
+        console.log(queryString)
         connection.query(queryString, function(err, result){
             if (err) throw err;
             cb(result);
