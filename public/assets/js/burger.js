@@ -1,4 +1,5 @@
 $(function() {
+    // Response for when the user clicks the devour button for a burger
     $(".eat").on("click", function(event) {
         var id = $(this).data("id");
         var devoured = $(this).data("devoured");
@@ -17,6 +18,7 @@ $(function() {
         );
     });
 
+    // Response for when a user submits a new burger
     $(".create-form").on("submit", function(event){
         event.preventDefault();
 
